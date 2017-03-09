@@ -2,7 +2,7 @@
 
 `vim` syntax highlighting for [`cram`]().
 
-![Example highlighting using the quantum colorscheme](/demo.gif?raw=true)
+![Example highlighting using the quantum colorscheme](/demo.png?raw=true)
 
 ## Installation
 
