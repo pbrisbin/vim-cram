@@ -3,14 +3,14 @@ if exists('b:current_syntax')
 endif
 
 " Include shell syntax file
-execute 'syntax include @CramShellHighlight $VIMRUNTIME/syntax/sh.vim'
-syntax match CramAnnotation '\v^\S.+$'
+execute 'syntax include @cramShellHighlight $VIMRUNTIME/syntax/sh.vim'
+syntax match cramAnnotation '\v^\S.+$'
 
 " Highlight cram test annotations as bash syntax
-syntax match CramCommandStart '\v^\s+\zs\$\ze\s*.+$' containedin=CramCommand
-syntax match CramCommand      '\v^\s+\$\s*.+$' contains=@CramShellHighlight
+syntax match cramCommandStart '\v^\s+\zs\$\ze\s*.+$' containedin=cramCommand
+syntax match cramCommand      '\v^\s+\$\s*.+$' contains=@cramShellHighlight
 
-highlight default link CramAnnotation   Title
-highlight default link CramCommandStart Todo
+highlight default link cramAnnotation   Title
+highlight default link cramCommandStart Todo
 
 let b:current_syntax = 'cram'
