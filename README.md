@@ -1,6 +1,6 @@
 # vim-cram v0.1.0 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/MisanthropicBit/vim-cram/master/LICENSE)
 
-`vim` syntax highlighting for [`cram`]().
+`vim` syntax highlighting for [`cram`](https://github.com/brodie/cram).
 
 ![Example highlighting using the quantum colorscheme](/demo.png?raw=true)
 
