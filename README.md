@@ -1,4 +1,4 @@
-# vim-cram v0.1.0 ![Build status](https://travis-ci.org/MisanthropicBit/vim-cram.svg?branch=master) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/MisanthropicBit/vim-cram/master/LICENSE)
+# vim-cram v0.1.0 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/MisanthropicBit/vim-cram/master/LICENSE)
 
 `vim` syntax highlighting for [`cram`]().
 
