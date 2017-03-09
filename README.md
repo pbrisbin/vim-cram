@@ -2,8 +2,9 @@
 
 `vim` syntax highlighting for [`cram`](https://github.com/brodie/cram).
 
-Since `cram` already contains a syntax highlighting file, here are some reasons
-to install `vim-cram` instead:
+Since `cram` already contains a [syntax highlighting
+file](https://github.com/brodie/cram/blob/master/contrib/cram.vim), here are
+some reasons to install `vim-cram` instead:
 
 * Adaptable syntax highlighting based on `cram` indentation setting.
 * Read `.cramrc` files using `CramConfig`.
