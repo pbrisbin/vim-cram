@@ -40,4 +40,12 @@ endfunction
 
 " Run cram on the current file
 function! cram#run()
+    if !executable('cram')
+        echoerr "vim-cram: cram must be in path"
+    endif
+
+    let file = expand('%:p')
+    let result = system('cram ' . file)
+
+    echo result
 endfunction
