@@ -39,12 +39,18 @@ function! cram#load_configuration(filename)
 endfunction
 
 " Run cram on the current file
-function! cram#run()
+function! cram#run(filename)
     if !executable('cram')
         echoerr "vim-cram: cram must be in path"
+        return
     endif
 
     let file = expand('%:p')
+
+    if !empty(a:filename)
+        let file = a:filename
+    endif
+
     let result = system('cram ' . file)
 
     echo result
