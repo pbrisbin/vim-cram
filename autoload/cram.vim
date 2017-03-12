@@ -40,6 +40,23 @@ function! cram#load_configuration(filename)
     return result
 endfunction
 
+" Open a temporary unnamed scratch buffer for displaying some output
+function! s:open_scratch_buffer(contents, ft)
+    silent! execute 'bot bel new'
+    call append(0, split(a:contents, "\n"))
+
+    setlocal buftype=nowrite bufhidden=wipe nobuflisted noswapfile nowrap
+    execute ":setlocal ft=" . a:ft
+
+    " Easy way of quitting the scratch buffer
+    silent! execute 'nnoremap <silent> <buffer> q :q<CR>'
+
+    " Make sure ANSI escape sequences are highlighted
+    silent! execute 'AnsiEsc'
+    silent! redraw
+
+    " Jump to the top of the file
+    execute "normal! gg"
 endfunction
 
 " Run cram on the current file
@@ -57,5 +74,5 @@ function! cram#run(filename)
 
     let result = system('cram ' . file)
 
-    echo result
+    call s:open_scratch_buffer(result, 'diff')
 endfunction
