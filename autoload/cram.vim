@@ -7,6 +7,7 @@ function! cram#load_configuration(filename)
         return {}
     endtry
 
+    let result = {}
     let i = 0
 
     " Find the position of the cram entry
@@ -20,22 +21,25 @@ function! cram#load_configuration(filename)
 
     " Find the value of the 'indent' setting
     while i < len(config)
-        let m = matchlist(config[i], '\v^\s*(\w+)\s*=\s*(\w+)\s*$')
+        let m = matchlist(config[i], '\v^\s*(\w+)\s*\=\s*(\w+)\s*$')
 
         if len(m) >= 3
-            let [key, value] = m[1], m[2]
+            let [key, value] = [m[1], m[2]]
 
             if key == 'indent'
                 let g:vimcram#indent = str2nr(value)
-                return
+                let result[key] = str2nr(value)
+            else
+                let result[key] = value
             endif
         endif
 
         let i += 1
     endwhile
 
-    " Default to four
-    let g:vimcram#indent = 4
+    return result
+endfunction
+
 endfunction
 
 " Run cram on the current file
