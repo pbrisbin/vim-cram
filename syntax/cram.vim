@@ -2,6 +2,8 @@ if exists('b:current_syntax')
     finish
 endif
 
+let s:indent = g:vimcram#indent
+
 " Include shell syntax file
 execute 'syntax include @cramShellHighlight $VIMRUNTIME/syntax/sh.vim'
 syntax match cramAnnotation '\v^\S.+$'
