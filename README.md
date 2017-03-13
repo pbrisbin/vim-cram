@@ -1,5 +1,7 @@
 # vim-cram v0.1.0 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/MisanthropicBit/vim-cram/master/LICENSE)
 
+**This project is currently under development**
+
 `vim` syntax highlighting for [`cram`](https://github.com/brodie/cram).
 
 Since `cram` already contains a [syntax highlighting
